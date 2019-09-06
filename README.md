@@ -1,24 +1,6 @@
-# README
+# Rails-CRUD-Neo4j-demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### References
++ [RailsではじめてのRESTful API を作ってみた。](https://qiita.com/akura/items/f7b9e6abd2248c5b3d0f)
++ [Rails + Neo4j + GraphQL](https://qiita.com/enkatsu/items/94ad000b76fd9cb89fb4)
++ [Could not open library 'libcurl.dll'](https://kwojcicki.github.io/blog/LIBCURL-JEKYLL)

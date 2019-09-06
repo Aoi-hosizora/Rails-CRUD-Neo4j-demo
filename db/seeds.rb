@@ -1,13 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Mysql
 
-require 'csv'
+require "csv"
 
-CSV.foreach('db/driver.csv') do |row|
-    Driver.create(:name => row[0], :tel => row[1], :car_number => row[2])
+CSV.foreach("db/driver.csv") do |row|
+  Driver.create(:name => row[0], :tel => row[1], :car_number => row[2])
 end
+
+# Neo4j
+
+5.times { |i|
+  User.create(user_id: i, user_name: sprintf("User%d", i))
+}
+
+Follow.create(from_node: User.find_by(user_id: 0), to_node: User.find_by(user_id: 1))
+Follow.create(from_node: User.find_by(user_id: 0), to_node: User.find_by(user_id: 2))
+Follow.create(from_node: User.find_by(user_id: 1), to_node: User.find_by(user_id: 0))
+Follow.create(from_node: User.find_by(user_id: 1), to_node: User.find_by(user_id: 3))
+Follow.create(from_node: User.find_by(user_id: 2), to_node: User.find_by(user_id: 4))
+Follow.create(from_node: User.find_by(user_id: 4), to_node: User.find_by(user_id: 0))
