@@ -2,19 +2,19 @@ module Api
   class DriversController < ApplicationController
     before_action :set_driver, only: [:show, :update, :destroy]
 
-    # GET /drivers
+    # GET /api/drivers
     def index
       @drivers = Driver.all
 
       render json: @drivers
     end
 
-    # GET /drivers/1
+    # GET /api/drivers/1
     def show
       render json: @driver
     end
 
-    # POST /drivers
+    # POST /api/drivers
     def create
       @driver = Driver.new(driver_params)
 
@@ -25,7 +25,7 @@ module Api
       end
     end
 
-    # PATCH/PUT /drivers/1
+    # PATCH/PUT /api/drivers/1
     def update
       if @driver.update(driver_params)
         render json: @driver
@@ -34,7 +34,7 @@ module Api
       end
     end
 
-    # DELETE /drivers/1
+    # DELETE /api/drivers/1
     def destroy
       @driver.destroy
       render json: @driver
@@ -42,7 +42,6 @@ module Api
 
     private
 
-    # Use callbacks to share common setup or constraints between actions.
     def set_driver
       @driver = Driver.find(params[:id])
     end
