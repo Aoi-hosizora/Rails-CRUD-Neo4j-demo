@@ -18,3 +18,5 @@ Follow.create(from_node: User.find_by(user_id: 1), to_node: User.find_by(user_id
 Follow.create(from_node: User.find_by(user_id: 1), to_node: User.find_by(user_id: 3))
 Follow.create(from_node: User.find_by(user_id: 2), to_node: User.find_by(user_id: 4))
 Follow.create(from_node: User.find_by(user_id: 4), to_node: User.find_by(user_id: 0))
+Follow.create(from_node: User.find_by(user_id: 3), to_node: User.find_by(user_id: 2))
+Follow.create(from_node: User.find_by(user_id: 2), to_node: User.find_by(user_id: 3))

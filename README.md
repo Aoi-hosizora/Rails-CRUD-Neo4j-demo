@@ -7,7 +7,13 @@
 + `ruby 2.5.5p157 [x64-mingw32]`
 + `gem 2.7.6.2`
 + `rails 6.0.0`
++ `neo4j 3.5.8`
++ `mysql 8.0.15`
 + `Windows 10 Version 1803`
+
+### GEM Depedencies
++ `neo4j 9.6.0`
++ `mysql2 0.5.2-x64-mingw32`
 
 ### References
 + [RailsではじめてのRESTful API を作ってみた。](https://qiita.com/akura/items/f7b9e6abd2248c5b3d0f)
